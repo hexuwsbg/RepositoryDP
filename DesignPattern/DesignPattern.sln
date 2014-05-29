@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibilityPrincip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{37CCCC83-2C4C-4E51-B389-AC9B17FB605B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{04212D51-A2E6-4D32-9711-CE1BD5B307C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySite", "MySite\MySite.csproj", "{2AF5427D-E098-4AF9-875B-5C893A9BEA0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{37CCCC83-2C4C-4E51-B389-AC9B17FB605B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37CCCC83-2C4C-4E51-B389-AC9B17FB605B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37CCCC83-2C4C-4E51-B389-AC9B17FB605B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04212D51-A2E6-4D32-9711-CE1BD5B307C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04212D51-A2E6-4D32-9711-CE1BD5B307C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04212D51-A2E6-4D32-9711-CE1BD5B307C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04212D51-A2E6-4D32-9711-CE1BD5B307C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF5427D-E098-4AF9-875B-5C893A9BEA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF5427D-E098-4AF9-875B-5C893A9BEA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF5427D-E098-4AF9-875B-5C893A9BEA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF5427D-E098-4AF9-875B-5C893A9BEA0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

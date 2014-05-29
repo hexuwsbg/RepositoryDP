@@ -16,12 +16,8 @@ namespace Decorator
             //shirt.Decorate(person);
             //bt.Decorate(shirt);
             //bt.Show();
-            Console.WriteLine(DateTime.Now.ToString("yyyyMMdd"));
-            List<string> s = null;
-            foreach ( string ss in s )
-            {
-
-            }
+            DateTime dt = new DateTime(2014,5,4,8,9,3);
+            Console.WriteLine(dt.ToString("HH:mm:ss"));
             Console.Read();
         }
     }
