@@ -1,0 +1,62 @@
+﻿@model ImbarkPlatform.Areas.AccountManagement.Models.RegisterModel
+
+@{
+    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <style type="text/css">
+        .ConfirmPasswordErrorMsg
+        {
+            display:none;
+            color:red;
+        }
+    </style>
+    <script lang="ja">
+        function Validate() {
+            var ret = true;
+            if ($("#Password").val() != $("#ConfirmPassword").val()) {
+                $(".ConfirmPasswordErrorMsg").show();
+                ret = false;
+            }
+            return ret;
+        }
+    </script>
+</head>
+<body>
+    <div>
+    @using (Html.BeginForm()) {
+
+    <fieldset>
+        <legend>注册表单</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Nickname)
+                @Html.TextBoxFor(m => m.Nickname)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                <div>
+                    @Html.PasswordFor(m => m.ConfirmPassword)
+                    <div class="ConfirmPasswordErrorMsg" >* 确认密码与新密码不一致</div>
+                </div>
+            </li>
+        </ol>
+        <input type="submit" value="注册" onclick="return Validate();" />
+    </fieldset>
+}
+    </div>
+</body>
+</html>
