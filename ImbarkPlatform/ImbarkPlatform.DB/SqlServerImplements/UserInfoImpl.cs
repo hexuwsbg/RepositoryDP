@@ -42,17 +42,17 @@ namespace ImbarkPlatform.DB.SqlServerImplements
                 {
                     ht.Add(pi.Name, pi.GetValue(user));
                 }
-                //conn = ConnectionFactory.GetConnection();
+                conn = ConnectionFactory.GetConnection();
                 conn.ExecuteNonQuery(sqlInsert, ht);
                 conn.CommitTransaction();
             }
-            catch ( Exception e )
+            catch
             {
                 if ( conn != null )
                 {
                     conn.RollbackTransaction();
                 }
-                throw e;
+                throw;
             }
             finally
             {

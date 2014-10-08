@@ -5,11 +5,11 @@ DROP TABLE UserInfo
 GO
 CREATE TABLE UserInfo(
 	[UserId] int NOT NULL PRIMARY KEY IDENTITY(1,1),
-	[Nickname] nvarchar(32) NOT NULL,
+	[Nickname] nvarchar(64) NOT NULL,
 	[Email] nvarchar(64) NOT NULL,
-	[Password] nvarchar(32) NOT NULL,
+	[Password] nvarchar(64) NOT NULL,
 	[IsActive] bit,
-	[ActiveCode] nvarchar(64),
+	[ActiveCode] nvarchar(128),
 	[ActiveCodeExpireTime] datetime,
 	[LastActiveTime] datetime,
 	[Role] smallint)

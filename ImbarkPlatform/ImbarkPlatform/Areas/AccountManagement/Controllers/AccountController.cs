@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ImbarkPlatform.Areas.AccountManagement.Models;
 using ImbarkPlatform.Lib.UserManagement;
+using ImbarkPlatform.Services.AccountManagement.AccountServiceImplements;
 using ImbarkPlatform.Services.AccountManagement.AccountServiceInterfaces;
 
 namespace ImbarkPlatform.AccountManagement.Controllers
@@ -29,6 +30,9 @@ namespace ImbarkPlatform.AccountManagement.Controllers
         [HttpPost]
         public ActionResult Register( RegisterModel model )
         {
+            ias = new AccountServiceImpl();
+
+            ias.Register((UserInfo) model);
             return View();
         }
 
