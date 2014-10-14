@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper\Encryption.cs" />
+    <Compile Include="Helper\Mail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserManagement\CommEnum.cs" />
     <Compile Include="UserManagement\UserInfo.cs" />

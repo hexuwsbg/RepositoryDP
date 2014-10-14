@@ -35,6 +35,7 @@ namespace ImbarkPlatform.Services.AccountManagement.AccountServiceImplements
             userInfo.ActiveCode = Guid.NewGuid().ToString() + "_" + Guid.NewGuid().ToString();
             userInfo.ActiveCodeExpireTime = now.AddDays(15);
             userInfoDAO.AddUser(userInfo);
+            // TODO: Send email
         }
 
         public bool ActivateUser( UserInfo userInfo )
