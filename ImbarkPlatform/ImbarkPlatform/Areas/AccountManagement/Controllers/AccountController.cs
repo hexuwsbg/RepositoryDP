@@ -8,15 +8,21 @@ using ImbarkPlatform.Lib.UserManagement;
 using ImbarkPlatform.Services.AccountManagement.AccountServiceImplements;
 using ImbarkPlatform.Services.AccountManagement.AccountServiceInterfaces;
 
-namespace ImbarkPlatform.AccountManagement.Controllers
+namespace ImbarkPlatform.Areas.AccountManagement.Controllers
 {
     public class AccountController : Controller
     {
         private IAccountService ias;
         //
         // GET: /UserInfo/
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
 
-        public ActionResult Login(string email, string password)
+        [HttpPost]
+        public ActionResult Login( LoginModel model )
         {
             return View();
         }
@@ -30,9 +36,16 @@ namespace ImbarkPlatform.AccountManagement.Controllers
         [HttpPost]
         public ActionResult Register( RegisterModel model )
         {
-            ias = new AccountServiceImpl();
+            if ( ValidateRegisterModel(model) )
+            {
+                ias = new AccountServiceImpl();
 
-            ias.Register((UserInfo) model);
+                ias.Register((UserInfo) model);
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "";
+            }
             return View();
         }
 

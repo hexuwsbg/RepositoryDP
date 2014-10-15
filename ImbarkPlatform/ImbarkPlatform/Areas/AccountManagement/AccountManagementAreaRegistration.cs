@@ -19,7 +19,7 @@ namespace ImbarkPlatform.Areas.AccountManagement
                 "AccountManagement/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional },
                 null,
-                new string[] { "ImbarkPlatform.AccountManagement.Controllers" }
+                new string[] { "ImbarkPlatform.Areas.AccountManagement.Controllers" }
             );
         }
     }

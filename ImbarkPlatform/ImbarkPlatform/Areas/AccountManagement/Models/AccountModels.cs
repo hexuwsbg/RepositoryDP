@@ -7,6 +7,12 @@ using ImbarkPlatform.Lib.UserManagement;
 
 namespace ImbarkPlatform.Areas.AccountManagement.Models
 {
+    public class LoginModel
+    {
+        public string Username { set; get; }
+        public string Password { set; get; }
+    }
+
     public class RegisterModel
     {
         public string Email { set; get; }
